@@ -42,7 +42,7 @@ class MainActivity : ComponentActivity() {
 fun LearnText(text1: String, text2: String, text3: String, modifier: Modifier = Modifier) {
     Column(
         verticalArrangement = Arrangement.Center,
-        modifier = modifier.padding(8.dp)
+        modifier = modifier
     ) {
         Text(
             text = text1, fontSize = 24.sp,
