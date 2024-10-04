@@ -29,9 +29,9 @@ class MainActivity : ComponentActivity() {
             LearnTogetherTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     LearnText(
-                        text1 = "Jetpack Compose tutorial",
-                        text2 = "Jetpack Compose is a modern toolkit for building native Android UI. Compose simplifies and accelerates UI development on Android with less code, powerful tools, and intuitive Kotlin APIs.",
-                        text3 = "In this tutorial, you build a simple UI component with declarative functions. You call Compose functions to say what elements you want and the Compose compiler does the rest. Compose is built around Composable functions. These functions let you define your app's UI programmatically because they let you describe how it should look and provide data dependencies, rather than focus on the process of the UI's construction, such as initializing an element and then attaching it to a parent. To create a Composable function, you add the @Composable annotation to the function name."
+                        text1 = "",
+                        text2 = "",
+                        text3 = ""
                     )
                 }
             }
@@ -47,17 +47,17 @@ fun LearnText(text1: String, text2: String, text3: String, modifier: Modifier = 
         Text(
             text = text1, fontSize = 24.sp,
             modifier = Modifier
-                .padding(all = 16.dp)
+                .padding(start = 16.dp, end = 16.dp, bottom = 16.dp, top = 16.dp)
         )
         Text(
             text = text2, textAlign = TextAlign.Justify,
             modifier = Modifier
-                .padding(all = 16.dp)
+                .padding(start = 16.dp, end = 16.dp)
         )
         Text(
             text = text3, textAlign = TextAlign.Justify,
             modifier = Modifier
-                .padding(all = 16.dp)
+                .padding(start = 16.dp, end = 16.dp, bottom = 16.dp, top = 16.dp)
         )
     }
 }
