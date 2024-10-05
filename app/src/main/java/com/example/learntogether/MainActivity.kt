@@ -7,9 +7,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -27,13 +25,11 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             LearnTogetherTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     LearnText(
                         text1 = "",
                         text2 = "",
                         text3 = ""
                     )
-                }
             }
         }
     }
@@ -63,7 +59,7 @@ fun LearnText(text1: String, text2: String, text3: String, modifier: Modifier = 
 }
 
 @Composable
-fun LearnImage(text1: String, text2: String, text3: String, modifier: Modifier = Modifier) {
+fun LearnImage(text1: String, text2: String, text3: String) {
     val image = painterResource(R.drawable.bg_compose_background)
 
     Column {
