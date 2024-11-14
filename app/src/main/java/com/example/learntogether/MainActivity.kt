@@ -3,7 +3,6 @@ package com.example.learntogether
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -22,14 +21,13 @@ import com.example.learntogether.ui.theme.LearnTogetherTheme
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContent {
             LearnTogetherTheme {
-                    LearnText(
-                        text1 = "",
-                        text2 = "",
-                        text3 = ""
-                    )
+                LearnImage(
+                    stringResource(R.string.jetpack_compose_text1),
+                    text2 = stringResource(R.string.jetpack_compose_text2),
+                    text3 = stringResource(R.string.text3)
+                )
             }
         }
     }
